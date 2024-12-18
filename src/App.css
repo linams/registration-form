@@ -1,0 +1,225 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(#42006c , #fff);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* App container */
+.app-container {
+  width: 700px;
+  /* max-width: 500px; */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Headings */
+.header {
+  font-size: 30px;
+  color: #360752;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form elements */
+label {
+  font-size: 17px;
+  font-weight: 500;
+  color: #42006c;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus state for inputs */
+input:focus {
+  border-color: #d5d15b;
+  outline: none;
+  
+}
+
+/* Button styles */
+button {
+  width: 300px;
+  padding: 14px;
+  background-color: #42006c;
+  border: none;
+  border-radius: 18px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+}
+.upload , .cap {
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.submitContainer{
+  display: flex;
+  gap: 35px;
+  margin:  auto;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #b136c9;
+}
+
+button:active {
+  background-color: #315f74;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Error message */
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Webcam container */
+.webcam-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.webcam {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Captured image */
+.captured-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Review container */
+.review-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.review-container p {
+  font-size: 16px;
+  color: #555;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.review-container h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #333;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Footer (optional, for small screen) */
+.footer {
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 400;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #5b9bd5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .webcam {
+    max-width: 90%;
+  }
+
+  .captured-image {
+    max-width: 90%;
+  }
+}
