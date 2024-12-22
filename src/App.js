@@ -15,7 +15,7 @@ const App = () => {
   const [isFaceDetected, setIsFaceDetected] = useState(false);
   const [step, setStep] = useState(1); // 1: Form, 2: Webcam, 3: Review
   const webcamRef = useRef(null);
-  const url ="";
+  const url ="http://localhost:3002/api/register";
 
   useEffect(() => {
     const loadModels = async () => {
