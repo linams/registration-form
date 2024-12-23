@@ -145,22 +145,38 @@ const App = () => {
       photo: imageSrc,
     };
     console.log("Registration Data:", regData);
-    alert("Registration saved successfully!");
-    event.preventDefault()
-  };
-  const submit= (e) => {
-    e.preventDefault();
+    const form=new FormData()
+    //form.append("image",imageSrc)
+    //form.append("email",email)
     Axios.post(url,{
       name : name,
       email :email,
       id : id,
-      password : password,
+     password : password,
       photo : imageSrc
     })
+   //Axios.post(url,form)
+    alert("Registration saved successfully!");
+    event.preventDefault()
+  };
+  const submit= (e) => {
+    console.log("this is the data")
+    e.preventDefault();
+    const form=new FormData()
+    form.append("image",imageSrc)
+    form.append("email",email)
+   // Axios.post(url,{
+    //  name : name,
+    //  email :email,
+    //  id : id,
+    //  password : password,
+    //  photo : imageSrc
+   // })
+   Axios.post(url,form)
   };
 
   return (
-    <form onSubmit={(e)=>submit(e)} >
+    <form onSubmit={submit} >
     <div className="app-container">
       {step === 1 && (
         <div className="form-container">
